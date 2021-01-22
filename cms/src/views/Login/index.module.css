@@ -1,0 +1,11 @@
+.container{
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    right:50%;
+    margin-left: -250px;
+    margin-top: -380px;
+    background: rgba(255,255,255,0.3);
+
+}

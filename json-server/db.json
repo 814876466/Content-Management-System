@@ -1,0 +1,472 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": 123456,
+      "roleName": "超级管理员",
+      "roleState": true,
+      "default": true,
+      "roleType": 3
+    },
+    {
+      "username": "dwadwa",
+      "password": "dwa",
+      "roleType": 2,
+      "roleState": true,
+      "roleName": "管理员",
+      "id": 6
+    },
+    {
+      "username": "TonyW",
+      "password": "666",
+      "roleName": "小编",
+      "roleState": true,
+      "default": false,
+      "roleType": 1,
+      "id": 7
+    },
+    {
+      "username": "xyz",
+      "password": "666",
+      "roleName": "小编",
+      "roleState": true,
+      "default": false,
+      "roleType": 1,
+      "id": 8
+    },
+    {
+      "username": "张彬彬",
+      "password": "666",
+      "roleName": "小编",
+      "roleState": true,
+      "default": false,
+      "roleType": 1,
+      "id": 9
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "roleName": "超级管理员",
+      "roleRight": [
+        {
+          "category": "文章管理",
+          "list": [
+            "文章列表",
+            "创建文章",
+            "文章预览",
+            "文章分类"
+          ]
+        },
+        {
+          "category": "用户管理",
+          "list": [
+            "用户列表",
+            "添加用户",
+            "删除用户",
+            "修改用户"
+          ]
+        },
+        {
+          "category": "权限管理",
+          "list": [
+            "角色列表",
+            "权限列表",
+            "添加角色",
+            "修改角色",
+            "删除角色"
+          ]
+        }
+      ],
+      "default": true
+    },
+    {
+      "id": 2,
+      "roleName": "管理员",
+      "roleRight": [
+        {
+          "category": "文章管理",
+          "list": [
+            "文章列表",
+            "创建文章",
+            "文章预览",
+            "文章分类"
+          ]
+        }
+      ],
+      "default": true
+    },
+    {
+      "id": 3,
+      "roleName": "小编",
+      "roleRight": [
+        {
+          "category": "文章管理",
+          "list": [
+            "文章列表",
+            "创建文章",
+            "文章预览"
+          ]
+        }
+      ],
+      "default": true
+    }
+  ],
+  "rights": [
+    {
+      "id": 1,
+      "title": "文章列表",
+      "key": "文章管理-文章列表",
+      "grade": 1,
+      "category": "文章管理"
+    },
+    {
+      "id": 2,
+      "title": "创建文章",
+      "key": "文章管理-创建文章",
+      "grade": 1,
+      "category": "文章管理"
+    },
+    {
+      "id": 3,
+      "title": "文章预览",
+      "key": "文章管理-文章预览",
+      "grade": 1,
+      "category": "文章管理"
+    },
+    {
+      "id": 4,
+      "title": "文章分类",
+      "key": "文章管理-文章分类",
+      "grade": 2,
+      "category": "文章管理"
+    },
+    {
+      "id": 5,
+      "title": "用户列表",
+      "key": "用户管理-用户列表",
+      "grade": 3,
+      "category": "用户管理"
+    },
+    {
+      "id": 6,
+      "title": "添加用户",
+      "key": "用户管理-添加用户",
+      "grade": 3,
+      "category": "用户管理"
+    },
+    {
+      "id": 7,
+      "title": "删除用户",
+      "key": "用户管理-删除用户",
+      "grade": 3,
+      "category": "用户管理"
+    },
+    {
+      "id": 8,
+      "title": "修改用户",
+      "key": "用户管理-修改用户",
+      "grade": 3,
+      "category": "用户管理"
+    },
+    {
+      "id": 9,
+      "title": "角色列表",
+      "key": "权限管理-角色列表",
+      "grade": 3,
+      "category": "权限管理"
+    },
+    {
+      "id": 10,
+      "title": "权限列表",
+      "key": "权限管理-权限列表",
+      "grade": 3,
+      "category": "权限管理"
+    },
+    {
+      "id": 11,
+      "title": "添加角色",
+      "key": "权限管理-添加角色",
+      "grade": 3,
+      "category": "权限管理"
+    },
+    {
+      "id": 12,
+      "title": "修改角色",
+      "key": "权限管理-修改角色",
+      "grade": 3,
+      "category": "权限管理"
+    },
+    {
+      "id": 13,
+      "title": "删除角色",
+      "key": "权限管理-删除角色",
+      "grade": 3,
+      "category": "权限管理"
+    }
+  ],
+  "categories": [
+    {
+      "title": "IT",
+      "value": "IT",
+      "id": 11,
+      "default": true,
+      "grade": 1,
+      "children": [
+        {
+          "title": "前端",
+          "value": "前端",
+          "id": 111,
+          "default": true,
+          "grade": 2,
+          "children": [
+            {
+              "title": "Vue",
+              "value": "Vue",
+              "id": 1111,
+              "default": true,
+              "grade": 3
+            },
+            {
+              "title": "React",
+              "value": "React",
+              "id": 1112,
+              "default": true,
+              "grade": 3
+            },
+            {
+              "title": "Angular",
+              "value": "Angular",
+              "id": 1113,
+              "default": true,
+              "grade": 3
+            },
+            {
+              "title": "小程序",
+              "value": "小程序",
+              "id": 1114,
+              "default": true,
+              "grade": 3
+            }
+          ]
+        },
+        {
+          "title": "Java",
+          "value": "Java",
+          "id": 112,
+          "default": true,
+          "grade": 2
+        },
+        {
+          "title": "Python",
+          "value": "Python",
+          "id": 113,
+          "default": true,
+          "grade": 2
+        },
+        {
+          "title": "PHP",
+          "value": "PHP",
+          "id": 114,
+          "default": true,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "title": "娱乐",
+      "value": "娱乐",
+      "id": 12,
+      "default": true,
+      "grade": 1,
+      "children": [
+        {
+          "title": "明星",
+          "value": "明星",
+          "id": 121,
+          "default": true,
+          "grade": 2
+        },
+        {
+          "title": "电影",
+          "value": "电影",
+          "id": 122,
+          "default": true,
+          "grade": 2,
+          "children": [
+            {
+              "title": "华语",
+              "value": "华语",
+              "id": 1221,
+              "default": true,
+              "grade": 3
+            },
+            {
+              "title": "欧美",
+              "value": "欧美",
+              "id": 1222,
+              "default": true,
+              "grade": 3
+            },
+            {
+              "title": "日韩",
+              "value": "日韩",
+              "id": 1223,
+              "default": true,
+              "grade": 3
+            },
+            {
+              "title": "美图",
+              "value": "美图",
+              "id": 1224,
+              "default": true,
+              "grade": 3
+            },
+            {
+              "title": "影评",
+              "value": "影评",
+              "id": 1225,
+              "default": true,
+              "grade": 3
+            }
+          ]
+        },
+        {
+          "title": "星座",
+          "value": "星座",
+          "id": 123,
+          "default": true,
+          "grade": 2
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "author": "admin",
+      "content": "<p>xdfghdxfghdfg</p>\n<p>fgbnkguifty</p>\n<p>dfhgdfgh</p>\n",
+      "title": "cghj",
+      "category": [
+        "娱乐",
+        "明星"
+      ],
+      "id": 1
+    },
+    {
+      "author": "admin",
+      "content": "<p>dfghj</p>\n<p>ghjfghghjk</p>\n<p>dfvxzcgfd</p>\n",
+      "title": "ghjkdgh",
+      "category": [
+        "IT",
+        "前端",
+        "Vue"
+      ],
+      "id": 2
+    },
+    {
+      "author": "admin",
+      "content": "<p>fghjkfcghjndfgh</p>\n<p>dfghbfgki</p>\n<p>gyujidtygh</p>\n<p>fgjcgh</p>\n<p>jdfgh</p>\n",
+      "title": "fjkghjkxfcghjgh",
+      "category": [
+        "娱乐",
+        "星座"
+      ],
+      "id": 3
+    },
+    {
+      "author": "admin",
+      "content": "<p>xdfghdxfghdfg</p>\n<p>fgbnkgui</p>\n",
+      "title": "cghj",
+      "category": [
+        "娱乐",
+        "星座"
+      ],
+      "id": 4
+    },
+    {
+      "author": "admin",
+      "content": "<p>xdfghdxfghdfg</p>\n<p>fgbnkguiftyxcvbnnb</p>\n<p>x'c'v'b'n'n'b</p>\n",
+      "title": "cghj",
+      "category": [
+        "娱乐",
+        "星座"
+      ],
+      "id": 5
+    },
+    {
+      "author": "xyz",
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">中新网客户端北京6月2日电(任思雨)“我们偶尔迟到，但是一定会到。”</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">在五月的最后一天，五月天实现了他们2020年的“五月之约”。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">5月31日晚八点，“突然好想见到你”线上演唱会正式举行。唱完第一首歌后，五月天推开门，走进了巨大的体育场。空旷的场馆内，只有五个人站在舞台中央，但灯光设备、舞台效果并没有打折，更特别的是，所有的座位都摆上了荧光棒，“每一个荧光棒都代表了在现场的你们”。😁</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">《一颗苹果》《盛夏光年》《孙悟空》《星空》《我不愿让你一个人》《派对动物》《爱情的模样》《恋爱ing》《知足》《诺亚方舟》《倔强》……唱到《突然好想你》时，李荣浩、萧敬腾、毛不易更是惊喜出现在画面，与主唱阿信隔空合唱。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">一首首熟悉的旋律响起，屏幕前的很多人不自觉地唱了起来，甚至留下了泪：</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">“我要在五月天青春不老大学里永不毕业。”</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">“五月天演唱会太好哭了呜呜呜，满满当当的回忆，从初一一直听到现在。”</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 0.19rem;font-family: -apple-system-font, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif;\">“很久都没有过这种青春洋溢的激情了，五月天的歌总能让我感动让我热泪盈眶。”</span>&nbsp;</p>\n",
+      "title": "五月天线上演唱会刷屏这里有你的青春吗？",
+      "category": [
+        "娱乐",
+        "明星"
+      ],
+      "id": 6
+    },
+    {
+      "author": "xyz",
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">本文转自【北京青年报】；</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">湖北省新冠肺炎疫情防控指挥部昨天下午召开新闻发布会，介绍武汉市集中核酸检测排查工作情况。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">中华预防医学会社会医学分会主任委员、华中科技大学同济医学院公共卫生学院教授卢祖洵介绍，5月14日0时至6月1日24时，武汉市集中核酸检测9899828人，没有发现确诊病例，检出无症状感染者300名、检出率为0.303/万，追踪密切接触者1174名，其核酸检测结果均为阴性，对无症状感染者和密切接触者均进行了医学隔离观察。</span>&nbsp;</p>\n",
+      "title": "武汉近990万人集中核酸检测 无症状感染者检出率仅0.303/万",
+      "category": [
+        "娱乐",
+        "电影",
+        "华语"
+      ],
+      "id": 7
+    },
+    {
+      "author": "xyz",
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: arial;\"><strong>富凯摘要：持有三年，赚了40多亿，好想你是资本运作的赢家，却是业务整合的输家。</strong></span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\"><strong>作者|川扇假</strong></span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">四年时间收购的公司9亿变49亿，赚了40亿的同时，期间还能得到超过3亿的企业净利润，这样的收购堪称成功。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">好想你在决定出售百草味的时候，虽然已经赚得盆满钵满，但却也道出一个苦涩的事实，在零售互联网化的当下，好想你即便有爆款百草味的加持，也终究没有能够“网上”一步，而专注于实体店模式的它，也把百草味带出了徒。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(153,153,153);background-color: rgb(255,255,255);font-size: 18px;font-family: arial;\">当初“好想你”现在卖你赚大钱</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">2016年，好想你聘礼9.6亿迎娶百草味，举办了盛大的发布会，该笔收购也成为当年互联网零食领域最大的资本投资。</span>&nbsp;</p>\n",
+      "title": "舍弃现金奶牛，面对群狼环伺，好想你49亿卖掉未来",
+      "category": [
+        "IT",
+        "Java"
+      ],
+      "id": 8
+    },
+    {
+      "author": "xyz",
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">国家也发布了相关政策要求互联网用户必须实名：2017年6月1日，国家发布《网络安全法》，要求用户使用网络服务时，必须提供真实身份信息。2019年11月，国家出台《关于防止未成年人沉迷网络游戏工作的通知》(下简称《通知》)，要求自2020年1月1日起，企业不得为未实名注册的用户提供游戏服务。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">此次发布的《通知》，要求所有游戏帐号要严格实行实名管理;严格控制未成年人使用网络游戏时段、时长;规范向未成年人提供付费服务。如果帐号不实名，用户最多只能通过游戏公司提供的游客体验模式玩一小时，并且15天内同一设备仅能体验一次，杜绝未成年沉迷游戏的情况发生。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">华为帐号采用多种方式帮助用户便捷实现实名认证，推动保障互联网信息安全，更用心地保护未成年身心健康。同时，实名认证可提升华为帐号安全性，也可提升找回密码和自助申诉(变更已停用手机号/邮箱)的成功率</span>&nbsp;</p>\n",
+      "title": "华为帐号实名认证 推动保障互联网信息安全 更用心保..",
+      "category": [
+        "IT",
+        "前端",
+        "小程序"
+      ],
+      "id": 9
+    },
+    {
+      "author": "xyz",
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">蓝鲸财经6月2日讯，咖啡品牌永璞近日完成千万级首轮融资，本轮领投方为昕先资本（洽洽家族基金），亲亲食品战投和宽窄创投跟投。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">永璞创始人铁皮表示，本轮融资后，永璞今年会加大人才的引进，包括电商运营和投放，也有计划开始明星层面的合作。此外今年也会考虑进入citysuper、ole、久光等线下渠道。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">据36氪报道，与去年同期相比，永璞的销售额已经实现5倍左右的增，据公司提供的数据，其生意参谋近30天销售额已经超过800万，其中冻干咖啡是最大的增量。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">公开资料显示，永璞成立于2014 年，致力于便携精品速溶咖啡产品，其产品包括挂耳、冷萃咖啡液和冻干咖啡粉等，目标用户为22-30岁之间的女性。</span>&nbsp;</p>\n",
+      "title": "咖啡品牌“永璞”完成千万级首轮融资",
+      "category": [
+        "IT",
+        "前端",
+        "React"
+      ],
+      "id": 10
+    },
+    {
+      "author": "TonyW",
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">马斯克给出的消息非常简短，并没有解释暂时离开的原因，也没有透露什么时候会回来。据悉，目前马斯克在Twitter上拥有3500万粉丝。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">IT之家了解到，马斯克过去在Twitter上的一些帖子曾引起过争议，因此在美国这个特别动荡的时期，他可能是听从了建议，或者为自己决定，暂时远离该网站。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">但马斯克并不是一个喜欢回避争议的人，所以其他因素可能也在起作用。这位亿万富翁企业家可能只是想休息一段时间，因为最近几周马斯克确实很忙，其中包括他在加州的特斯拉制造工厂重新开放，以及SpaceX载人航天的关键任务。另外，最近他也再次成为了父亲，所以可能想多花点时间陪陪儿子。</span>&nbsp;</p>\n",
+      "title": "马斯克宣布：将暂时离开Twitter",
+      "category": [
+        "IT",
+        "PHP"
+      ],
+      "id": 11
+    },
+    {
+      "author": "TonyW",
+      "content": "<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 18px;font-family: arial;\">参考消息网6月2日报道</span><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">日媒关注到，疫情期间，亚洲各地电子商务零售商销售额激增，因为被禁足的消费者开始在网上消费，封锁措施也出人意料地使消费者之前可能从未访问过的电子商务平台变得红火。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">据日本《日经亚洲评论》杂志网站5月31日报道，广告技术公司Criteo称，其所做的市场调研表明，超过50%的消费者现在由于疫情计划进行更多的线上购物，相比之下，只有17%的人表示，他们现在不会网购。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">新加坡电子商务平台虾皮购物网站的首席商务官周俊杰说：“我们看到，人们对防护和个人卫生用品的需求增加了，包括口罩和手部消毒液及其他日用必需品，比如不易腐的食物和饮料。”</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">据报道，虾皮购物网站因疫情而获益，今年一季度其成交总金额猛增74.3%，达到62亿美元（1美元约合7.13元人民币——本网注）。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">虾皮购物网站一季度的订单量达到4.298亿单，去年同期为2.035亿单，增加了111.2%。按网络流量计算，虾皮购物网站是东南亚大型电子商务平台之一。该网站为消费者提供了采购烹饪、工作和娱乐用品的方案，而且免邮费。其母公司海洋集团5月称，它正着眼于扩大业务，可能会进行并购。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">周俊杰说：“此次疫情从实质上加快了向线上生活方式转变的速度，这种转变范围广、幅度深，而且我们认为，是不可逆的。”行业参与者正迅速发起各种运动以跟上这一转变的步伐，并扭转全球消费下滑的总体趋势。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">报道称，美国投资管理公司景顺投资公司指出，在中国，今年一季度，在线零售渗透率达到28.2%，高于去年同期的23%。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">景顺投资公司投资总监威廉·袁（音）对《日经亚洲评论》说：“电子商务零售商在零售市场上很可能会继续获得份额。我们认为，它们会更加侧重于发展和改善与顾客的互动，以确保可以在网上进行更多的销售。”</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">报道指出，参与者面临的挑战以完成配送为中心，因为生活必需品网购潮遭遇了物流危机。疫情破坏了国际供应链，各国为了控制疫情而关闭了部分行业。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">威廉·袁说：“我们看到，各公司都在按政府的建议行事，不得不改变商品从仓库配送到顾客手中的模式。”</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">尽管电子商务作为一种商业形式在疫情中属于“受益一方”，但韩国最大电商网站之一韩领网络科技公司的高级营销主管萨钦·卡普尔说，他的公司不得不更努力地工作，以履行对顾客的承诺。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">报道注意到，行业参与者还互相协作以跨越疫情造成的障碍。印度尼西亚电子商务“独角兽”企业Bukalapak与Grab和戈杰克公司合作，以服务于顾客。</span></p>\n<p style=\"text-align:justify;\"><span style=\"color: rgb(51,51,51);background-color: rgb(255,255,255);font-size: 16px;font-family: arial;\">Bukalapak的营销负责人阿努格拉哈·马尔迪·奥内斯蒂说：“我们发起了很多倡议来真正留住顾客，比如给他们发大额优惠劵或让他们在下次购物时享受幅度较大的折扣，以及让他们能选择即时发货。”</span>&nbsp;</p>\n",
+      "title": "日媒：新冠疫情助推亚洲电商繁荣",
+      "category": [
+        "IT",
+        "Java"
+      ],
+      "id": 12
+    }
+  ],
+  "a": []
+}

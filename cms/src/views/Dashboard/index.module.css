@@ -1,0 +1,9 @@
+.active{
+    background: blue;
+}
+/* 全局的设置 */
+:global(#bgyellow){
+    background: yellow;
+}
+
+

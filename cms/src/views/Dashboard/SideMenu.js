@@ -9,21 +9,7 @@ const { Sider } = Layout;
 // const {roleType} = JSON.parse(localStorage.getItem('token'))
 
 class SideMenu extends Component {
-  // state = {
-  //   collapsed: false,
-  // }
-  //Redux
-  // componentDidMount (){
-  //   this.unscribe = store.subscribe(()=>{
-  //     this.setState({
-  //       collapsed:store.getState().isCollapsed
-  //     })
-  //     console.log(store.getState())
-  //   })
-  // }
-  // componentWillUnmount() {
-  //   this.unscribe()
-  // }
+
 
   SelectMenu = (val) => {
     const {roleType} = JSON.parse(localStorage.getItem('token'))
@@ -91,7 +77,7 @@ class SideMenu extends Component {
 const mapStateToProps = state => {
   return {
       isCollapsed:state.isCollapsed
-  } //函数返回值 ，就是将来往sideMeun 组件传来的属性
-}// 映射redux 状态==>当前组件属性
+  } 
+}
 
 export default connect(mapStateToProps)(withRouter(SideMenu))

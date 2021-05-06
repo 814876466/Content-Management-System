@@ -78,7 +78,6 @@ export default class Dashboard extends Component {
                         }}
                     >
 
-
                            <Switch>
                                 {roleType===3 ?
                                 <Route path="/user-manage/users" component= {UserManage}/>

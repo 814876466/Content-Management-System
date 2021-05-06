@@ -7,10 +7,9 @@ export default class RightManage extends Component {
     render() {
         return (
             <div id="bgpink">
-                RightManage
+                Right Management
 
                 <div>
-                <div>公共的选项卡</div>
                 <Switch>
                     <Route path="/right-manage/roles" component= {Roles}/>
                     <Route path="/right-manage/rights" component= {Rights}/>

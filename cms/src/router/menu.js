@@ -9,8 +9,8 @@ const MenuArr =[
     {
         title:'Home',
         icon :HomeOutlined,
-        permission:1, //权限字段
-        path:'/dashboard'
+        permission:1, 
+        path:'/home'
     },
     {
         title:"User Management",

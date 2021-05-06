@@ -1,4 +1,4 @@
-const httpMiddleware = require('http-proxy-middleware'); //这个软件不用下载
+const httpMiddleware = require('http-proxy-middleware'); 
 
 console.log("kerwin-111",httpMiddleware)
 // node ,vue
@@ -20,4 +20,4 @@ module.exports = function(app) {
   );
 };
 
-// /api
+

@@ -11,7 +11,7 @@ import Create from '../ArticleManage/create'
 import updateArticles from '../ArticleManage/updateArticles'
 import axios from 'axios'
 import 'antd/dist/antd.css'
-import './index.css' //全局影响
+import './index.css' 
 //antd
 import { Layout } from 'antd'
 import {autorun} from 'mobx'
@@ -52,7 +52,7 @@ export default class Dashboard extends Component {
     }
 
     componentWillUnmount(){
-        this.unscribe()//解绑监听事件
+        this.unscribe()
     }
 
     render() {
@@ -80,7 +80,6 @@ export default class Dashboard extends Component {
 
 
                            <Switch>
-                                {/* 用户权限-用户列表 */}
                                 {roleType===3 ?
                                 <Route path="/user-manage/users" component= {UserManage}/>
 
@@ -91,7 +90,6 @@ export default class Dashboard extends Component {
                                 : null}
 
 
-                                {/* 文章管理- 文章列表 文章分类 */}
                                 {
                                   roleType>=2 ?
                                   <Route path='/article-manage/preview/:id' component={Preview}></Route>

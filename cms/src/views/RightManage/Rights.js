@@ -11,26 +11,19 @@ export default class Rights extends Component {
             title: 'ID',
             dataIndex: 'id',
             key: 'id',
-            render: id => <b>{id}</b> //定制每个td 的样式
+            render: id => <b>{id}</b> 
         },
         {
-            title: '权限名称',
+            title: 'Right Name',
             dataIndex: 'title',
             key: 'title',
         },
         {
-            title: '权限等级',
+            title: 'Right Level',
             dataIndex: 'grade',
             key: 'grade',
             render: grade => {
-                /*
-                    let obj = {
-                        a:"green",
-                        b:"orange",
-                        c:"red"
-                    }
-                */
-               console.log(grade)
+               
                 let arr = ["green", "orange", "red"]
                 return <Tag color={arr[grade - 1]}>{grade}</Tag>
             }
@@ -47,7 +40,6 @@ export default class Rights extends Component {
                 this.setState({
                     dataList: res.data
                 })
-                console.log(this.state.dataList)
             })
         }
     }

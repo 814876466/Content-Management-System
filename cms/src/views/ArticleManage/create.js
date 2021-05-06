@@ -17,13 +17,13 @@ export default class Create extends Component {
     }
     steps = [
         {
-          title: '基本信息'
+          title: 'Basic Information'
         },
         {
-          title: '文章内容',
+          title: 'Article Content',
         },
         {
-          title: '提交文章',
+          title: 'Submit',
         },
       ];
     layout = {
@@ -49,13 +49,11 @@ export default class Create extends Component {
         return (
             <div>
                 <Steps current={this.state.current}>
-                    {/*进度条名字  */}
                 {this.steps.map(item => (
                     <Step key={item.title} title={item.title} />
                 ))}
                 </Steps>
 
-                {/* 进度条内容 */}
                 <div style={{display:this.state.current===0?"block":"none"}}>
 
                 <Form {...this.layout}
@@ -74,10 +72,7 @@ export default class Create extends Component {
                     <Form.Item label="category" name="category" rules={[{ required: true }]}>
                         <Cascader
                             options={this.state.categoryList}
-                            // onChange={onChange}
                             placeholder="Please select"
-                            // showSearch={{ filter }}
-                            //后端数据中没有label。我们可以自定义
                             fieldNames={{ label: 'title' }}
                         />
                     </Form.Item>
@@ -94,7 +89,6 @@ export default class Create extends Component {
                 <div style={{display:this.state.current===2?"block":"none"}}>
                 </div>
 
-                {/* 进度条按钮 */}
                 <div className="steps-action">
                 {this.state.current < this.steps.length - 1 && (
                     <Button type="primary" onClick={() => this.next()}>
@@ -119,7 +113,7 @@ export default class Create extends Component {
     next= () => {
         if (this.state.current===0) {
             console.log(this.refs.firstForm)
-            this.refs.firstForm.validateFields() //验证表单
+            this.refs.firstForm.validateFields() 
             .then(
                 value=>{console.log(value)
                 this.setState({
@@ -141,12 +135,6 @@ export default class Create extends Component {
       }
 
       onSubmit = () =>{
-        // "title": "1111111",
-        // "content": "1-conent",
-        // "author": "admin",
-        // "category": [
-        //   "娱乐",
-        //   "星座"
        let author= JSON.parse(localStorage.getItem('token')).username
       let {title,category} =this.state.basicInfo
        Axios.post('http://localhost:5000/articles',{

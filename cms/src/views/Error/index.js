@@ -4,7 +4,7 @@ export default class Error extends Component {
     render() {
         return (
             <div>
-                Ooooops
+                Ooooops 404 NOT FOUND
             </div>
         )
     }

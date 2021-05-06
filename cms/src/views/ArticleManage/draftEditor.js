@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Editor } from 'react-draft-wysiwyg'
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
-import draftjsToHtml from 'draftjs-to-html'// draft对象==》html 方便存储数据库
+import draftjsToHtml from 'draftjs-to-html'
 import { EditorState,ContentState } from 'draft-js';
 import htmlToDraft from 'html-to-draftjs';
 
@@ -16,7 +16,6 @@ export default class draftEditor extends Component {
         if(!this.props.InputContent){
             return null
         }
-        //这步是因为为了防止数据还没拿到所以inputcontent是undefined,后面就无法进行，们会报错
 
         const html = this.props.InputContent;
         const contentBlock = htmlToDraft(html);
@@ -33,33 +32,28 @@ export default class draftEditor extends Component {
 
         return (
             <Editor
-                    editorState={this.state.editorState} //不写的话写字板不显示内容
+                    editorState={this.state.editorState}
                     toolbarClassName="toolbarClassName"
                     wrapperClassName="wrapperClassName"
                     editorClassName="editorClassName"
-                    contentState="" //里面是填写的内容
-                    onContentStateChange={this.onContentStateChange}//改变state的内容
+                    contentState=""
+                    onContentStateChange={this.onContentStateChange}
                     onEditorStateChange={this.onEditorStateChange}
                     onBlur={()=>{
-                         console.log("失去焦点",draftjsToHtml(this.state.contentState))
 
-                        //子=>父
+                      
                         this.props.onEvent(draftjsToHtml(this.state.contentState))
-                    }} //进行html格式化
+                    }} //html formation
                     />
         )
     }
     onContentStateChange = (contentState)=>{
-        // console.log(draftjsToHtml(contentState))
-        // contentState ==> html 格式代码 ===> 存到数据库中
         this.setState({
             contentState
         })
-        console.log(this.state.contentState)
     }
 
     onEditorStateChange = (editorState)=>{
-        // console.log(editorState)
         this.setState({
             editorState
         })

@@ -9,25 +9,25 @@ export default class list extends Component {
     }
     columns =[
         {
-            title: '文章标题',
+            title: 'Article Title',
             dataIndex: 'title',
             key: 'title',
           },
           {
-            title: '文章作者',
+            title: 'Author',
             dataIndex: 'author',
             key: 'author',
           },
           {
-            title: '文章类别',
+            title: 'Category',
             dataIndex: 'category',
             key: 'category',
             render: (category)=>category.join('/')
           },
           {
-            title: '操作',
+            title: 'Action',
             key: 'action',
-            render: (obj)=> <Tooltip title="search">
+            render: (obj)=> <Tooltip>
                                 <Button
                                     disabled={obj.default}
                                     type="danger"
@@ -55,6 +55,7 @@ export default class list extends Component {
                                     size="small"
                                     icon={<DeleteOutlined />}
                                     style={{marginLeft:'5px'}}
+                                    
                                     onClick={()=>{
                                     this.handleDelete(obj.id)
                                     }}
@@ -90,7 +91,6 @@ export default class list extends Component {
                    columns={this.columns}
                    rowKey={item => item.id}/>
 
-                   {/*弹出添加框  */}
             </div>
 
         )

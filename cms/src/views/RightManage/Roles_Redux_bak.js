@@ -21,7 +21,6 @@ export default class Roles extends Component {
     ]
 
     handleDel = (id) => {
-        //首先把state中的id删掉 再把json-server中的删掉
         let newList=this.state.dataList.filter(item=>item.id!==id)
         this.setState({
             dataList: newList
@@ -30,23 +29,9 @@ export default class Roles extends Component {
             alert(res.statusText)
         }).catch(err=>alert(err))
     }
-    // actionPromise= () => {
-    //     return Axois.get('http://localhost:5000/roles').then(res=>{
-    //             if(res.status===200){
-    //                 this.setState({
-    //                     dataList: res.data
-    //                 })
-    //                 return {
-    //                     type: "ksave_rolelist",
-    //                     payload: res.data
-    //                 }
-    //             }else{
-    //                 alert(res.statusText)
-    //             }
-    //         }).catch(err=>alert(err))
-    // }
+ 
     actionAsyncPromise=async ()=>{
-        let res = await Axois.get('http://localhost:5000/roles')  //同步写法，只有在得到结果时才会继续执行
+        let res = await Axois.get('http://localhost:5000/roles')  
 
         this.setState({
                         dataList: res.data

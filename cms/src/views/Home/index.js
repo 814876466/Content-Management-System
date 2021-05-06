@@ -22,16 +22,12 @@ export default class Home extends Component {
 
         }).catch(err=>alert(err))
 
-        // setTimeout(()=>{
-        //     this.createEchart()
-        // },0)
 
         window.onresize=()=>{
-            this.myChart.resize()//这是echart的方法，不要和原生js混淆
+            this.myChart.resize()
         }
 
         this.unscribe=autorun(()=>{
-            console.log(isFullScreen.get())
             setTimeout(()=>{
                 this.myChart && this.myChart.resize();
             },0)
@@ -54,12 +50,11 @@ export default class Home extends Component {
                 }
                 }
                 >
-                    全屏
+                    full screen
                     </Button>
                 <div ref="echartsDiv" style={{height:'100%',width:'100%'}}>
                             Home
 
-                        {/*这是首页内容，一个饼图，每位作者各发表了几篇文章  */}
                 </div>
             </div>
 
@@ -72,7 +67,7 @@ export default class Home extends Component {
         // use configuration item and data specified to show chart
         let option = {  backgroundColor: '#2c343c',
         title: {
-            text: '统级文章类型',
+            text: 'Article Category',
             left: 'center',
             top: 20,
             textStyle: {
@@ -124,7 +119,7 @@ export default class Home extends Component {
                     return Math.random() * 200;
                 }
             }
-        ]};  //主要看option的配置
+        ]};  
         this.myChart.setOption(option);
     }
 }

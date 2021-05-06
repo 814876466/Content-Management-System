@@ -9,7 +9,7 @@ const reducer = combineReducers({
     roleList:roleListReducer,
     rightList:rightListReducer
 })
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //配置devTools
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; 
 const store=createStore(reducer,{
     isCollapsed:false,
     roleList:[],

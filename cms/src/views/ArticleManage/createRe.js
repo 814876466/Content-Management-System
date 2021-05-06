@@ -10,13 +10,13 @@ export default class Create extends Component {
     }
     steps = [
         {
-          title: '基本信息'
+          title: 'Basic Information'
         },
         {
-          title: '文章内容',
+          title: 'Article Content',
         },
         {
-          title: '提交文章',
+          title: 'Submit',
         },
       ];
     layout = {
@@ -43,30 +43,7 @@ export default class Create extends Component {
 
         return (
             <div>
-                 {/* <Form
-                 style={{marginTop:"10px"}}
-                  ref="firstForm"
-                  name="control-ref"
-                  onFinish={this.onFinish}>
-
-                    <Form.Item
-                    label="title"
-                    name="title"
-                    rules={[{ required: true, message: 'Please enter a title!' }]}
-                    >
-                        <Input />
-                    </Form.Item>
-                    <Form.Item label="category" name="category" rules={[{ required: true }]}>
-                        <Cascader
-                            options={this.state.categoryList}
-                            // onChange={onChange}
-                            placeholder="Please select"
-                            // showSearch={{ filter }}
-                            //后端数据中没有label。我们可以自定义
-                            fieldNames={{ label: 'title' }}
-                        />,
-                    </Form.Item>
-                </Form> */}
+            
 
                 <Form
                     style={{marginTop:"10px"}}
@@ -87,10 +64,7 @@ export default class Create extends Component {
                 >
                     <Cascader
                             options={this.state.categoryList}
-                            // onChange={onChange}
                             placeholder="Please select"
-                            // showSearch={{ filter }}
-                            //后端数据中没有label。我们可以自定义
                             fieldNames={{ label: 'title' }}
                         />
                 </Form.Item>
@@ -103,22 +77,7 @@ export default class Create extends Component {
                             Next
                 </Button>
 
-                     {/* 进度条按钮 */}
-                     {/* <div className="steps-action">
-                        {this.state.current < this.steps.length - 1 && (
-
-                        )}
-                        {this.state.current === this.steps.length - 1 && (
-                            <Button type="primary" onClick={() => message.success('Processing complete!')}>
-                            Done
-                            </Button>
-                        )}
-                        {this.state.current > 0 && (
-                            <Button style={{ margin: '0 8px' }} onClick={() => this.prev()}>
-                            Previous
-                            </Button>
-                        )}
-                        </div> */}
+                   
 
             </div>
         )
@@ -126,7 +85,7 @@ export default class Create extends Component {
 
     next= () => {
         if (this.state.current===0) {
-            this.refs.firstForm.validateFields() //验证表单
+            this.refs.firstForm.validateFields() 
             .then(value=>{console.log(value)}).catch(errorInfo => {
 
               });

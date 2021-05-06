@@ -8,7 +8,7 @@ import {
   UserOutlined
 
 } from '@ant-design/icons';
-//import store from '../../redux/store'
+
 const { Header } = Layout;
 
 
@@ -37,10 +37,6 @@ class IndexHeader extends Component {
         this.props.history.push('/login')
     }
     toggle = () => {
-      // store.dispatch({
-      //   type:"change_collapse",
-      //   payload:!this.state.collapsed
-      // })
 
         this.props.change({
           type:"change_collapse",
@@ -61,8 +57,8 @@ class IndexHeader extends Component {
                 }
                 <Button type="primary" onClick={()=>{this.goback()}} style={{marginLeft:"10px"}}>Back</Button>
                 <div style={{float:'right', paddingRight: '10px'}}>
-                    <span>欢迎{this.token.username}回来</span>
-                    {/* 下拉菜单 */}
+                    <span>Welcome,{this.token.username}</span>
+                
                     <Dropdown overlay={this.menu}>
                         <Avatar icon={<UserOutlined />} size="large"/>
                     </Dropdown>
@@ -82,7 +78,6 @@ const mapStateToProps = ()=>{
 }
 const mapDispatchToProps ={
   change(obj){
-    console.log("change-connect约定好，传给topheader的回调",obj)
     return obj
 }
 }

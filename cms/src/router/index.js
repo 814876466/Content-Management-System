@@ -11,7 +11,6 @@ export default class index extends Component {
             <HashRouter>
                 <Switch>
                     <Route path="/login" component={Login}></Route>
-                     {/* 路由拦截--三目 */}
                 <Route path="/" render={()=>
                     localStorage.getItem("token")?<Dashboard/>:<Redirect to="/login"/>
                 } />

@@ -33,7 +33,7 @@ export default function PreviewHooks(props) {
                 Preview Your Article
                 <p>{title}--{subtitle}</p>
                 <div dangerouslySetInnerHTML={{__html:state}} ></div>
-                {/* {this.state.content} */}
+            
             </div>
     )
 }

@@ -27,7 +27,7 @@ export default class preview extends Component {
                 Preview
 
                 <div dangerouslySetInnerHTML={{__html:this.state.content}} ></div>
-                {/* {this.state.content} */}
+            
             </div>
         )
     }

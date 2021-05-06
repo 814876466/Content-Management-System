@@ -10,19 +10,18 @@ import {FormatPainterOutlined} from '@ant-design/icons'
     }
     columns = [
         {
-            title: '角色名称',
+            title: 'Role Name',
             dataIndex: 'roleName',
             key: 'roleName'
         },
         {
-            title: '操作',
+            title: 'Action',
             key: 'action',
             render: (obj) => <Button onClick={()=>{this.handleDel(obj.id)}}><FormatPainterOutlined  twoToneColor="#eb2f96"/></Button>
         }
     ]
 
     handleDel = (id) => {
-        //首先把state中的id删掉 再把json-server中的删掉
         let newList=this.state.dataList.filter(item=>item.id!==id)
         this.setState({
             dataList: newList
@@ -55,18 +54,14 @@ import {FormatPainterOutlined} from '@ant-design/icons'
 }
 
 const mapStateToProps= (state)=>{
-    console.log(state)
     return {
         myRoleList:state.roleList
     }
 }
 const mapDispatchToProps={
    async actionAsyncPromise(){
-        let res = await Axois.get('http://localhost:5000/roles')  //同步写法，只有在得到结果时才会继续执行
+        let res = await Axois.get('http://localhost:5000/roles')  
 
-        // this.setState({
-        //                 dataList: res.data
-        //             })
         return {
                     type: "ksave_rolelist",
                     payload: res.data

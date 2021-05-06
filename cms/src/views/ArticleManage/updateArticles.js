@@ -22,13 +22,13 @@ export default class updateArticles extends Component {
     }
     steps = [
         {
-          title: '基本信息'
+          title: 'Basic Information'
         },
         {
-          title: '文章内容',
+          title: 'Article Content',
         },
         {
-          title: '提交文章',
+          title: 'Submit',
         },
       ];
     layout = {
@@ -62,7 +62,6 @@ export default class updateArticles extends Component {
                        content,
                        firstNumber:2
                     })
-                    //将数据放在form里面 首先要确保数据的格式和form里的name对应
                     this.refs.firstForm.setFieldsValue(this.state.details)
                 }else{
                     message.error(res.statusText)
@@ -76,13 +75,11 @@ export default class updateArticles extends Component {
         return (
             <div>
                 <Steps current={this.state.current}>
-                    {/*进度条名字  */}
+                  
                 {this.steps.map(item => (
                     <Step key={item.title} title={item.title} />
                 ))}
                 </Steps>
-
-                {/* 进度条内容 */}
                 <div style={{display:this.state.current===0?"block":"none"}}>
 
                 <Form {...this.layout}
@@ -101,10 +98,7 @@ export default class updateArticles extends Component {
                     <Form.Item label="category" name="category" rules={[{ required: true }]}>
                         <Cascader
                             options={this.state.categoryList}
-                            // onChange={onChange}
                             placeholder="Please select"
-                            // showSearch={{ filter }}
-                            //后端数据中没有label。我们可以自定义
                             fieldNames={{ label: 'title' }}
                         />
                     </Form.Item>
@@ -121,7 +115,6 @@ export default class updateArticles extends Component {
                 <div style={{display:this.state.current===2?"block":"none"}}>
                 </div>
 
-                {/* 进度条按钮 */}
                 <div className="steps-action">
                 {this.state.current < this.steps.length - 1 && (
                     <Button type="primary" onClick={() => this.next()}>
@@ -146,7 +139,7 @@ export default class updateArticles extends Component {
     next= () => {
         if (this.state.current===0) {
             console.log(this.refs.firstForm)
-            this.refs.firstForm.validateFields() //验证表单
+            this.refs.firstForm.validateFields() 
             .then(
                 value=>{
                 this.setState({
@@ -168,12 +161,6 @@ export default class updateArticles extends Component {
       }
 
       onSubmit = () =>{
-        // "title": "1111111",
-        // "content": "1-conent",
-        // "author": "admin",
-        // "category": [
-        //   "娱乐",
-        //   "星座"
        let author= JSON.parse(localStorage.getItem('token')).username
       let {title,category} =this.state.details
        let id=this.props.match.params.id
